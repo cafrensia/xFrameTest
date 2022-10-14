@@ -39,7 +39,7 @@ public class SimpleXDataSet5Contoller {
 		String strEmpAge 			= null;
 		Map<String, Object> element = null;
 		int nRow 					= 0;
-		
+		int test =1;
 		try {
 			// XDataSet5오브젝트 생성
 			xDataSet5 = new XDataSet5(request, response);
