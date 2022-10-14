@@ -1,0 +1,1210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dongwon F&amp;B [Project]</title>
+<!-- style -->
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	padding: 20px;
+	font-family: dotum, Sans-Serif;
+	color: #333;
+	font-size: 11px;
+	background-color: #fff;
+}
+a:active, visited, link {
+	color: #00f;
+}
+a:hover {
+	color: #ff6600;
+}
+/* Title */
+h1 {
+	color: #000;
+	letter-spacing: -1px;
+	font-family: Tahoma;
+}
+/* Note */
+#note {
+	overflow: hidden;
+	margin: 10px 0 10px 0;
+	padding: 10px;
+	border: 2px dotted #000;
+	background: #eee;
+	letter-spacing: 0;
+}
+#note .note_left {
+	float: left;
+	width: 57%;
+}
+#note .note_right {
+	float: right;
+	width: 43%;
+	text-align: right;
+}
+#note p {
+	padding-left: 10px;
+}
+#note pre {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: Tahoma, Sans-Serif;
+	color: #333;
+	font-size: small;
+}
+#note h2 {
+	margin: 0px 0 10px 0;
+}
+#note .comment {
+	display: block;
+	margin: 5px 0 10px 0;
+	color: #666;
+}
+#note .issue {
+	color: #900;
+}
+#note .add {
+	color: #900;
+	font-weight: bold;
+}
+#note dl {
+	margin-bottom: 20px;
+}
+#note dt {
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+}
+#note ul li {
+	margin: 0 0 3px 20px;
+}
+#note ul li b {
+	display: inline-block;
+*display:inline;
+*zoom:1;
+	width: 90px;
+	color: #333;
+}
+.note_table {
+	width:98%;
+	border-left: 1px solid #666;
+	border-top: 1px solid #666;
+	border-collapse: collapse;
+}
+.note_table caption {
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+	text-align: left;
+}
+.note_table thead th {
+	padding: 5px 0px 3px 0px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+}
+.note_table tbody th {
+	padding: 5px 5px 3px 5px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	font-size: 11px;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.note_table tbody td {
+	padding: 5px 5px 3px 5px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	font-size: 11px;
+	text-align: left;
+}
+#mwork fieldset {
+	border: none;
+}
+#mwork legend {
+	display: none;
+}
+/* table */
+#mwork table {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	text-align: left;
+}
+#mwork caption {
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 10px;
+	color: #999;
+}
+#mwork .index td {
+	background: #ccc;
+}
+#mwork .indexRed td {
+	background: #fdd;
+}
+#mwork .indexGreen td {
+	background: #dfd;
+}
+#mwork .indexBlue td {
+	background: #ddf;
+}
+#mwork .indexYellow td {
+	background: #fff1c7;
+}
+tr.orange td {
+	background-color: #FFE4CA !important;
+}
+tr.green td {
+	background-color: #DEEED5 !important;
+}
+tr.purple td {
+	background-color: #F1E6FF !important;
+}
+tr.yellow td {
+	background-color: #FCFBDC !important;
+}
+tr.red td {
+	background-color: #FFE6E7 !important;
+}
+tr.grey td {
+	background-color: #cfcfcf !important;
+}
+tr.blue td {
+	background-color: #E1F5FD !important;
+}
+tr.white td {
+	background-color: #FFF !important;
+}
+tr.brown td {
+	background-color: #E6DCD2 !important;
+}
+#mwork tr.line {
+	border-top: 2px solid #666;
+}
+#mwork th {
+	padding: 6px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	color: #ccc;
+	font-size: 110%;
+	background-color: #000;
+}
+#mwork td {
+	padding: 4px 5px 2px 5px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	background-color: #eee;
+}
+/*#mwork td:hover {background-color:#ddd !important;}*/
+
+#mwork td.depth1 {
+	font-weight: bold;
+}
+#mwork td.type {
+	text-align: left;
+	color: #999;
+}
+#mwork td.deg {
+	text-align: center;
+}
+#mwork td.pub {
+	text-align: center;
+}
+#mwork td.dev {
+	text-align: center;
+}
+#mwork td.filename {
+	text-align: left;
+}
+#mwork td.task {
+	font-weight: bold;
+	text-align: center;
+}
+#mwork td.done {
+	color: #090;
+}
+#mwork td.undone {
+	color: #900;
+}
+#mwork td.check {
+	font-weight: bold;
+	text-align: center;
+	color: #909;
+}
+#mwork td.memo {
+	color: #000;
+}
+#mwork .filename span {
+	display: inline-block;
+	color: red;
+	margin-left: 10px;
+	font-weight: bold;
+}
+#mwork .filename span.new_no {
+	display: none;
+}
+#mwork .directory span {
+	display: inline-block;
+	color: red;
+	margin-left: 10px;
+	font-weight: bold;
+}
+/* task */
+#done {
+	font-weight: bold;
+	color: #090;
+}
+#undone {
+	font-weight: bold;
+	color: #900;
+}
+#total {
+	font-weight: bold;
+	color: #000;
+}
+#ratio {
+	font-weight: bold;
+	color: #000;
+}
+.red {
+	color: #990000 !important;
+}
+.green {
+	color: #090;
+}
+.blue {
+	color: #06C;
+}
+.c {
+	text-align: center !important;
+}
+.l {
+	text-align: left !important;
+}
+.r {
+	text-align: right !important;
+}
+.txt_cancel {
+	text-decoration: line-through;
+}
+</style>
+<!-- //style -->
+<script type="text/javascript" src=" http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script language="javascript">
+jQuery(document).ready(function(e) {	
+	var donePage = $("td.done").length;
+	var undonePage = $("td.undone").length;
+	var totalPage = $("td.task").length;
+	var ratio = parseInt(donePage/totalPage * 100);
+	
+	$("#done").text(donePage);
+	$("#undone").text(undonePage);
+	$("#total").text(totalPage);
+	$("#ratio").text(ratio);
+	
+	
+});
+</script>
+</head>
+<body>
+<!-- Note -->
+<h1>[The One Page Project] Dongwon F&amp;B Admin - Publishing List</h1>
+<div id="note">
+	<div class="note_left">
+		<dl>
+			<dt>Publishing 개발범위</dt>
+			<dd>
+				<ul>
+					<li>Web Browser 범위 : IE8 ~ IE11 / FireFox / Safari / Opera / Chrome</li>
+					<li>HTML 버전 : HTML5 + jQuery</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>웹표준, 웹접근성</dt>
+			<dd>
+				<ul>
+					<li>브라우저 타이틀, meta tag 페이지에 맞는 정보제공</li>
+					<li>image, input(text, passowrd, radio, checkbox), select, textarea등 이미지 및 폼요소에 대체텍스트 label, alt, title 제공</li>
+					<li>버튼에 페이지 이동과 새창 열림 title제공</li>
+					<li>테이블에 summery(column정보), caption(테이블정의) 제공</li>
+					<li>tab키에 의한 포커스이동 및 키보드조작 기능제공</li>
+					<li><b>W3C Markup :</b> <a href="http://validator.kldp.org" target="_blank">http://validator.kldp.org</a></li>
+					<!--li>W3C Markup (Mobile) <a href="http://validator.w3.org/mobile/" target="_blank">http://validator.w3.org/mobile</a></li-->
+					<li><b>접근성 :</b> <a href="http://wave.webaim.org/" target="_blank">http://wave.webaim.org</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>Publish Guide</dt>
+			<dd>
+				<ul>
+					<li><b>프로토타입(S) :</b><a href="Prototype.jsp" target="_blank">Prototype.jsp</a></li>
+					<li><b>버튼/탭 :</b><a href="/Guide/Guide_Button.jsp" target="_blank">/Guide/Guide_Button.jsp</a></li>
+					<li><b>테이블 :</b><a href="/Guide/Guide_Table.jsp" target="_blank">/Guide/Guide_Table.jsp</a></li>
+					<li><b>박스모델 :</b><a href="/Guide/Guide_Box.jsp" target="_blank">/Guide/Guide_Box.jsp</a></li>
+					<li><b>폼양식 :</b><a href="/Guide/Guide_Form.jsp" target="_blank">/Guide/Guide_Form.jsp</a></li>
+					<li><b>팝업 :</b><a href="/Guide/Guide_Popup.jsp" target="_blank">/Guide/Guide_Popup.jsp</a></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<div class="note_right">
+		<table border="1" class="note_table">
+			<caption>
+			CSS, Font, JS, image, include 경로
+			</caption>
+			<colgroup>
+			<col width="90">
+			<col width="100">
+			<col width="160">
+			<col width="*">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">항목</th>
+					<th scope="col">경로</th>
+					<th scope="col">파일명</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th rowspan="4" scope="row">css</th>
+					<td rowspan="4">/Common/CSS/</td>
+					<td>Layout.css</td>
+					<td>레이아웃 css</td>
+				</tr>
+				<tr>
+					<td>Content.css</td>
+					<td>컨텐츠관련 css</td>
+				</tr>
+				<tr>
+					<td>UI_Style.css</td>
+					<td>버튼, Tab, Form관련 css</td>
+				</tr>
+				<tr>
+					<td>Common.css</td>
+					<td>공통 css (Grid, font, color, margin, padding, float등)</td>
+				</tr>
+				<tr>
+					<th rowspan="3" scope="row">js</th>
+					<td rowspan="3">/Common/JS/</td>
+					<td>jquery-1.11.2.js</td>
+					<td>jquery core</td>
+				</tr>
+				<tr>
+					<td>jquery-ui-1.11.4.js</td>
+					<td>jquery ui custom</td>
+				</tr>
+				<tr>
+					<td>common.js</td>
+					<td>공통 js</td>
+				</tr>
+				<tr>
+					<th scope="row">image</th>
+					<td class="filename">/Images/</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th rowspan="4" scope="row">include</th>
+					<td rowspan="4" class="filename">/Includes/</td>
+					<td>Meta.jsp</td>
+					<td>메타태그 그룹 인클루드</td>
+				</tr>
+				<tr>
+					<td>Script.jsp</td>
+					<td>스크립트 그룹 인클루드</td>
+				</tr>
+				<tr>
+					<td>Styles.jsp</td>
+					<td>스타일시트 그룹 인클루드</td>
+				</tr>
+				<tr>
+					<td><p>Header.jsp, </p>
+					<p>Aside_폴더명.jsp</p>
+					<p>Footer.jsp</p></td>
+					<td>Header, Aside, Footer 인클루드</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--// Note --> 
+
+<!-- Table Sheet -->
+<div id="mwork">
+	<fieldset>
+		<legend>Update Date : 2015-09-07</legend>
+		<table id="tableTotal" class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+			<caption>
+			Work Progress
+			</caption>
+			<colgroup>
+			<col width="6%" />
+			<col width="*" />
+			<col width="8%" />
+			<col width="20%" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">Task</th>
+					<td><strong class="red">U</strong>: <span id="undone"></span> , <strong class="green">D</strong>: <span id="done"></span> / <strong>Total</strong>: <span id="total"></span> Page / <strong class="blue">Progress Ratio</strong>: <span id="ratio"></span>%</td>
+					<th scope="row">Description</th>
+					<td class="c">완료 - <strong class="blue">D</strong> (Done) / 미완료 - <strong class="red">U</strong> (Undone)</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+	<br />
+	<br />
+	<table id="tableSheet" class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<caption>
+		Publishing ProcedureSheet
+		</caption>
+		<colgroup>
+		<col width="8%">
+		<col width="9%">
+		<col width="10%">
+		<col width="9%">
+		<col width="10%">
+		<col width="5%">
+		<col width="4%">
+		<col width="4%">
+		<col width="19%">
+		<col width="4%">
+		<col width="4%">
+		<col width="*">
+		</colgroup>
+		<thead>
+			<tr>
+				<th width="98" scope="col">1 Depth</th>
+				<th scope="col">2 Depth</th>
+				<th scope="col">3 Depth</th>
+				<th scope="col">4 Depth</th>
+				<th scope="col">5 Depth</th>
+				<th scope="col">Type</th>
+				<th scope="col">Design</th>
+				<th scope="col">Publish</th>
+				<th scope="col">FileName/Link</th>
+				<th scope="col"><abbr title="Publishing">Task</abbr></th>
+				<th scope="col">Check</th>
+				<th scope="col">Memo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="line">
+				<td class="depth1" ><p>로그인</p>
+				</td>
+				<td class="depth2">&nbsp;</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Login.jsp" target="_blank">/Login.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!-- Brand -->
+			<tr class="line orange">
+				<td class="depth1" rowspan="10"><p>사이트관리</p>
+				</td>
+				<td rowspan="3" class="depth2">관리자회원관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Admin/Admin_List.jsp" target="_blank">/Site/Admin/Admin_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Admin/Admin_Write.jsp" target="_blank">/Site/Admin/Admin_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Admin/Admin_Edit.jsp" target="_blank">/Site/Admin/Admin_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth2">마이페이지</td>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/MyPage/MyPage.jsp" target="_blank">/Site/MyPage/MyPage.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth2">구글통계</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">Link</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">구글 애널리틱스로그인 새창띄움</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth2">메인관리</td>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Main/Main_Content.jsp" target="_blank">/Site/Main/Main_Content.jsp</a></td>
+				<td class="task undone">U</td>
+				<td class="check"></td>
+				<td class="memo">내용미확정</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth2">배너관리</td>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Banner/Banner_List.jsp" target="_blank">/Site/Banner/Banner_List.jsp</a></td>
+				<td class="task undone">U</td>
+				<td class="check"></td>
+				<td class="memo">내용미확정</td>
+			</tr>
+			<tr class="orange">
+				<td rowspan="3" class="depth2">팝업관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Popup/Popup_List.jsp" target="_blank">/Site/Popup/Popup_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Popup/Popup_Write.jsp" target="_blank">/Site/Popup/Popup_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Site/Popup/Popup_Edit.jsp" target="_blank">/Site/Popup/Popup_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!--// Brand -->
+			
+			<!-- Product -->
+			<tr class="line">
+				<td class="depth1" rowspan="3"><p>브랜드관리</p>
+				</td>
+				<td class="depth2">리스트</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Brand/Brand_List.jsp" target="_blank">/Brand/Brand_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			
+			<tr>
+				<td class="depth2">등록</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Brand/Brand_Write.jsp" target="_blank">/Brand/Brand_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth2">상세</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Brand/Brand_Edit.jsp" target="_blank">/Brand/Brand_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!--// Product -->
+			
+			<!-- cooking&Storyt -->
+			<tr class="line orange">
+				<td class="depth1" rowspan="4"><p>제품관리</p>
+				</td>
+				<td rowspan="3" class="depth2">제품관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Product/Product/Product_List.jsp" target="_blank">/Product/Product/Product_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Product/Product/Product_Write.jsp" target="_blank">/Product/Product/Product_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo"></td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Product/Product/Product_Edit.jsp" target="_blank">/Product/Product/Product_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo"></td>
+			</tr>
+			<tr class="orange">
+				<td class="depth2">진열관리</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4"></td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Product/Display/Display_List.jsp" target="_blank">/Product/Display/Display_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!--// cooking&Story -->
+			
+			<!-- Social Live -->
+			<tr class="line">
+				<td rowspan="14" class="depth1"><p>콘텐츠관리</p>
+				</td>
+				<td rowspan="3" class="depth2">소셜콘텐츠관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Social/Social_List.jsp" target="_blank">/Contents/Social/Social_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Social/Social_Write.jsp" target="_blank">/Contents/Social/Social_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Social/Social_Edit.jsp" target="_blank">/Contents/Social/Social_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth2">동원스토리관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Story/Story_List.jsp" target="_blank">/Contents/Story/Story_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="depth2">레시피관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Recipe/Recipe_List.jsp" target="_blank">/Contents/Recipe/Recipe_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Recipe/Recipe_Write.jsp" target="_blank">/Contents/Recipe/Recipe_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Recipe/Recipe_Edit.jsp" target="_blank">/Contents/Recipe/Recipe_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="depth2">TVCF관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/TVCF/CF_List.jsp" target="_blank">/Contents/TVCF/CF_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/TVCF/CF_Write.jsp" target="_blank">/Contents/TVCF/CF_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/TVCF/CF_Edit.jsp" target="_blank">/Contents/TVCF/CF_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="depth2">지면광고관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/PaperAd/PaperAd_List.jsp" target="_blank">/Contents/PaperAd/PaperAd_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/PaperAd/PaperAd_Write.jsp" target="_blank">/Contents/PaperAd/PaperAd_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/PaperAd/PaperAd_Edit.jsp" target="_blank">/Contents/PaperAd/PaperAd_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="depth2">홍보동영상관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Contents/Video/Video_List.jsp" target="_blank">/Contents/Video/Video_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!--// Social Live -->
+			
+			<!-- Company -->
+			<tr class="line orange">
+				<td class="depth1" rowspan="6"><p>기업관리</p>
+				</td>
+				<td rowspan="3" class="depth2">영업/판매사업장 관리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Company/Store/Store_List.jsp" target="_blank">/Company/Store/Store_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Company/Store/Store_Write.jsp" target="_blank">/Company/Store/Store_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Company/Store/Store_Edit.jsp" target="_blank">/Company/Store/Store_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td rowspan="3" class="depth2">전자공고</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Company/eNotice/eNotice_List.jsp" target="_blank">/Company/eNotice/eNotice_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Company/eNotice/eNotice_Write.jsp" target="_blank">/Company/eNotice/eNotice_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Company/eNotice/eNotice_Edit.jsp" target="_blank">/Company/eNotice/eNotice_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!--// Company -->
+			
+			<!-- Customer Service -->
+			<tr class="line">
+				<td class="depth1" rowspan="9"><p>고객센터</p>
+				</td>
+				<td rowspan="3" class="depth2">News & Notice</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/News/News_List.jsp" target="_blank">/Customer/News/News_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/News/News_Write.jsp" target="_blank">/Customer/News/News_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/News/News_Edit.jsp" target="_blank">/Customer/News/News_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth2" rowspan="4">자주찾는질문</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/FAQ/FAQ_List.jsp" target="_blank">/Customer/FAQ/FAQ_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth3">등록</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/FAQ/FAQ_Write.jsp" target="_blank">/Customer/FAQ/FAQ_Write.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/FAQ/FAQ_Edit.jsp" target="_blank">/Customer/FAQ/FAQ_Edit.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth3">자주찾는질문 Top6/Top10 관리</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/FAQ/FAQ_TopList.jsp" target="_blank">/Customer/FAQ/FAQ_TopList.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth2" rowspan="2">고객의 소리</td>
+				<td class="depth3">리스트</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/QnA/QnA_List.jsp" target="_blank">/Customer/QnA/QnA_List.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr >
+				<td class="depth3">상세</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Customer/QnA/QnA_View.jsp" target="_blank">/Customer/QnA/QnA_View.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<!--// Customer Service -->
+			
+			<!-- 사이트맵 -->
+			<tr class="orange line">
+				<td rowspan="6" class="depth1"><p>공통</p></td>
+				<td rowspan="5" class="depth2">팝업</td>
+				<td class="depth3">주요제품선택</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">popup</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Popup/LP_ProductSelList.jsp" target="_blank">/Popup/LP_ProductSelList.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">주요레시피선택</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">popup</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Popup/LP_RecipeSelList.jsp" target="_blank">/Popup/LP_RecipeSelList.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">홍보CF선택</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">popup</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Popup/LP_CFSelList.jsp" target="_blank">/Popup/LP_CFSelList.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">콘텐츠선택</td>
+				<td class="depth4">동원스토리관리</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">popup</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename">&nbsp;</td>
+				<td class="task undone">U</td>
+				<td class="check"></td>
+				<td class="memo">화면설계서없음</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth3">자주찾는질문선택</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">popup</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Popup/LP_FaqSelList.jsp" target="_blank">/Popup/LP_FaqSelList.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr class="orange">
+				<td class="depth2">로딩</td>
+				<td class="depth3">&nbsp;</td>
+				<td class="depth4">&nbsp;</td>
+				<td class="depth5">&nbsp;</td>
+				<td class="type">&nbsp;</td>
+				<td></td>
+				<td class="pub"></td>
+				<td class="filename"><a href="/Etc/Loading_Sample.jsp" target="_blank">/Etc/Loading_Sample.jsp</a></td>
+				<td class="task done">D</td>
+				<td class="check"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>			
+			<!--// 사이트맵 -->						
+		</tbody>
+	</table>
+</div>
+<!--// Table Sheet -->
+</body>
+</html>

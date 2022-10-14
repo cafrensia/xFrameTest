@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+	File : Layout.CSS 
+	Company : The Webstyle co.,ltd 
+ 	Author : Woo Seok, Shin 2015-09
+ 	CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+	CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc
+	CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding, border, background, color/font, align, etc 
+--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#Wrap {*zoom:1; position:relative; width:100%; min-width:1260px; min-height:100%;}
+#Wrap:before {display:block; content:""; position:absolute; left:0px; top:0px; z-index:-1; width:200px; height:100%; background-color:#2d3135;}
+#Wrap.wrap_login {min-width:392px; height:100%; min-height:550px;}
+#Wrap.wrap_login:before {display:none !important;}
+
+/* Header */
+#Header_Wrap {position:absolute; left:0px; top:0px; z-index:100; width:100%; height:91px; border-bottom:1px solid #e3e3e3; background-color:#ffffff;}
+#Header {*zoom:1; position:relative; width:1235px; height:90px;}
+#Header:after {content:""; display:block; clear:both;}
+#Header .logo_header {display:inline; position:absolute; left:29px; top:23px;}
+#Header .loginInfo {display:inline; position:absolute; top:9px; right:0px; font-size:12px; color:#666;}
+#Header .loginInfo .time {margin-right:10px; font-size:11px; line-height:24px;}
+#Header .loginInfo .user {margin-right:10px; line-height:24px;}
+#Header .loginInfo .btn {margin-top:-4px;}
+#Header .lnb_wrap {padding:31px 0 0 235px;}
+#Header .lnb {*zoom:1; height:60px;}
+#Header .lnb:after {content:""; display:block; clear:both;}
+#Header .lnb li.node1 {float:left;}
+#Header .lnb li.node1 a.depth1 {display:block; height:60px; padding:0 20px; font-family:"Dotum"; font-size:16px; line-height:60px; font-weight:bold;}
+#Header .lnb li.node1:hover a.depth1,
+#Header .lnb li.node1.on a.depth1 {color:#00a6ed;}
+
+/* Container */
+#Container {position:relative; width:1235px; padding:91px 0 50px 0; font-family:"Dotum"; font-size:12px;}
+
+/* Aside */
+#Aside {position:absolute; left:0px; top:91px; z-index:50; width:200px;}
+#Aside .snb_tit {height:75px; background-color:#000;}
+#Aside .snb_tit h1 {padding:40px 0 0 30px; font-size:16px; color:#fff; font-weight:bold;}
+#Aside .snb li.node1 {border-bottom:1px solid #000;}
+#Aside .snb li.node1 a.depth1 {display:block; height:35px; padding-left:40px; font-size:12px; line-height:35px; color:#fff; background:url('./Images/Common/bu_snb_off.gif') 28px 15px no-repeat;}
+#Aside .snb li.node1:hover,
+#Aside .snb li.node1.on {background:url('./Images/Common/bg_snb_on.gif') right 10px no-repeat; background-color:#00a6ed;}
+#Aside .snb li.node1:hover a.depth1,
+#Aside .snb li.node1.on a.depth1 {background:url('./Images/Common/bu_snb_on.gif') 26px 13px no-repeat;}
+
+/* Contents */
+#Contents {margin-left:235px; padding:40px 0;}
+.contents_header {position:relative; height:35px; border-bottom:2px solid #2d3135; margin-bottom:30px;}
+.contents_header .breadcrumb {position:absolute; top:3px; right:0px; display:inline-block; *display:inline; *zoom:1;}
+.contents_header .breadcrumb li {float:left; margin-left:10px; padding-left:12px; font-size:12px; line-height:13px; background:url('./Images/Common/bu_breadcrumb_arrow.gif') left 3px no-repeat;}
+.contents_header .breadcrumb li a {color:#8c8c8c; line-height:13px;}
+.contents_header .breadcrumb li:first-child {margin-left:0px; padding-left:0px; background:none;}
+.contents_header .breadcrumb li.active {color:#2e2f3a;}
+.contents_header h2 {padding-top:3px; font-size:16px; font-weight:bold; color:#3a332a;}
+
+/* Footer */
+#Footer_Wrap {position:absolute; left:0px; bottom:0px; z-index:100; width:100%; height:50px; border-top:1px solid #e8e8e8; background-color:#ffffff;}
+#Footer {width:1000px; height:49px; margin-left:235px;}
+#Footer .copyright {font-size:11px; line-height:49px; text-align:center;}
