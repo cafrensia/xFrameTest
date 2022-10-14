@@ -17,7 +17,7 @@ function screen_on_submitcomplete(mapid, result, recv_userheader, recv_code, rec
 	mulRecvMsg.settext(recv_msg);
 }
 
-/*
+/* 
 * 조회 버튼 마우스 클릭업시 이벤트 호출
 */
 function btn_search_on_mouseup(objInst)
