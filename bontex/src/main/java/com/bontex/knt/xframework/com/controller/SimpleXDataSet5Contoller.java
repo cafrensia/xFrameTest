@@ -40,7 +40,7 @@ public class SimpleXDataSet5Contoller {
 		Map<String, Object> element = null;
 		int nRow 					= 0;
 		int test =1;
-		int test2 =2;
+		int test2 =3;
 		try {
 			// XDataSet5오브젝트 생성
 			xDataSet5 = new XDataSet5(request, response);
