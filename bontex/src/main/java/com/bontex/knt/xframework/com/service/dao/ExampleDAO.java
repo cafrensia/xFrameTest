@@ -36,7 +36,7 @@ import com.bontex.knt.xframework.com.service.vo.ExampleVO;
  * @ 2017.05.23           최초생성
  *
  * @author 개발프레임웍크 실행환경 개발팀
- * @since 2017.05.23
+ * @since 2017.05.23 
  * @version 1.0
  * @see
  *
