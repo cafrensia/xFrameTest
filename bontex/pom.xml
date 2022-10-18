@@ -405,6 +405,7 @@
                 <version>2.1.1</version>
                 <configuration>
                     <webappDirectory>C:\Jenkins\workspace\bontex</webappDirectory>
+                    <outputDirectory>C:\Jenkins\workspace\bontex</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
