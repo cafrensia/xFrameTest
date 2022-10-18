@@ -1,0 +1,73 @@
+pg - api 
+
+신용 - d
+   - k
+   
+   xFrame tokken
+   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 
+   
+   /usr/lib/jvm/java-11-openjdk-amd64
+   
+   (empty for no passphrase): 
+   
+assphrase again: 
+Your identification has been saved in /var/lib/tomcat/.ssh/id_rsa
+Your public key has been saved in /var/lib/tomcat/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:jseS/Ad9eQur1bW85MQOV3cXwgmR5uuSv61Pk+DE0rA tomcat@d7a7784270f2
+The key's randomart image is:
++---[RSA 3072]----+
+|           oo    |
+|           oo .  |
+|         .o  + . |
+|          =.  . .|
+|        SE =..  *|
+|     . =. =.=.=.*|
+|      = +.oo.O.O |
+|       + o.o+ X .|
+|        ..+=+o + |
+
+--- jenkins
+Enter same passphrase again:
+Your identification has been saved in C:\Users\seeroo/.ssh/id_rsa.
+Your public key has been saved in C:\Users\seeroo/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:AmBVjRVeZ463lV5Qq6mzSGmEQfxpT2jA3yb6JO0BSXw seeroo@DESKTOP-I47NBJ4
+The key's randomart image is:
+
+alias sttmocat='/tmp/apache-tomcat-9.0.68/bin/startup.sh'
+alias sdtmocat='/tmp/apache-tomcat-9.0.68/bin/shutdown.sh'
+
+C:\gitTest\bontex\target\knt-1.0.0-BUILD-SNAPSHOT.war
+
+
+alias sdtomcat='/tmp/apache-tomcat-9.0.68/bin/shutdown.sh'
+alias sttomcat='/tmp/apache-tomcat-9.0.68/bin/startup.sh'
+
+ps -eaf | grep tomcat
+
+/tmp/apache-tomcat-9.0.68/conf
+
+ps -eaf | grep /tmp/apache-tomcat-9.0.68/conf
+
+root@d7a7784270f2:/tmp/apache-tomcat-9.0.68/webapps# ps -eaf | grep /tmp/apache-tomcat-9.0.68/conf
+root      1485     1 27 05:16 pts/1    00:00:25 /usr/bin/java -Djava.util.logging.config.file=/tmp/apache-tomcat-9.0.68/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /tmp/apache-tomcat-9.0.68/bin/bootstrap.jar:/tmp/apache-tomcat-9.0.68/bin/tomcat-juli.jar -Dcatalina.base=/tmp/apache-tomcat-9.0.68 -Dcatalina.home=/tmp/apache-tomcat-9.0.68 -Djava.io.tmpdir=/tmp/apache-tomcat-9.0.68/temp org.apache.catalina.startup.Bootstrap start
+enrai tookuni
+
+-------------------------------------------------------------------------------
+ps -eaf | grep tomcat | awk '{print $2}' |
+        while read PID
+        do
+                echo "Killing $PID"
+                kill -9 $PID
+                echo -e "Tomcat($PID) is being killed\n"
+        done
+
+        stanby
+		
+		ssh - port - 5000
+###### 10.18 jenkins 자동배포 완료.
+- war 경로 수정
+- maven clean 경로 수정 -> .war 파일 (jekins 작업경로로 clean)삭제 되도록 수정
+- /tmp/apache-tomcat-9.0.68/webapps/restart.sh tomcat shutdown -> startup shell스크립트 작성		
+###### 10.19 TODO ssh 설정 및 jenkins ssh shell 실행		
