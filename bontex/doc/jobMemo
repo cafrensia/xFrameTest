@@ -1,3 +1,11 @@
+xFrame 제품군은? 화면의 개발부터 테스트 운영까지 책임지는? UI 개발에 관련된 Full Set 솔루션을 갖춤으로써 다양한 고객의 Needs를 수용합니다.
+xFrame5 Runtime Version (IDE 기반 PC용 UI개발 솔루션)
+xFrame5 HTML5 version ( IDE 기반? HTML5 개발 솔루션)
+xFrame5 Lite ( eclpse기반 HTML5 UI개발 솔루션)
+xFrame＠Mobile ( App개발 솔루션)
+xFrame＠QM (품질관리 솔루션)
+
+--------------------------------------------------
 pg - api 
 
 신용 - d
@@ -64,6 +72,14 @@ ps -eaf | grep tomcat | awk '{print $2}' |
         done
 
         stanby
+        
+        
+       총 96.3
+       허리단면 41.3
+      허벅지 27.9
+      밑위 24.5
+      밑ㄴ단 16.2
+       
 		
 		ssh - port - 5000
 ###### 10.18 jenkins 자동배포 완료.
